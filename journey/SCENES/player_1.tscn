@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bxo2qqpoykia7"]
 
-[ext_resource type="Script" uid="uid://bsi2d7l3fr8eb" path="res://player_1.gd" id="1_bxx23"]
+[ext_resource type="Script" uid="uid://bsi2d7l3fr8eb" path="res://SCENES/player_1.gd" id="1_bxx23"]
 [ext_resource type="Texture2D" uid="uid://cfmvt3ndcbhbk" path="res://icon.svg" id="1_squ5q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bxx23"]
@@ -15,3 +15,7 @@ texture = ExtResource("1_squ5q")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_bxx23")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+visible = false
+limit_bottom = 811

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg5i0fv3hfmjc"]
+
+[ext_resource type="Texture2D" uid="uid://ciawi8ehafshg" path="res://green.webp" id="1_23i6h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h7j65"]
+size = Vector2(466, 72)
+
+[node name="Platform1" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1309, 484)
+scale = Vector2(1.2944444, 0.17777774)
+texture = ExtResource("1_23i6h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1311, 487)
+shape = SubResource("RectangleShape2D_h7j65")

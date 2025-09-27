@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1j5bbj4k4c4v"
-path="res://.godot/imported/Trustone-Grey-laid-1-1120x1120.png-0bb51adbeaa97085476c7585a42efc08.ctex"
+uid="uid://ciawi8ehafshg"
+path="res://.godot/imported/green.webp-e67d92e9ddf9ff9510918d50ff69d0d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Trustone-Grey-laid-1-1120x1120.png"
-dest_files=["res://.godot/imported/Trustone-Grey-laid-1-1120x1120.png-0bb51adbeaa97085476c7585a42efc08.ctex"]
+source_file="res://green.webp"
+dest_files=["res://.godot/imported/green.webp-e67d92e9ddf9ff9510918d50ff69d0d4.ctex"]
 
 [params]
 
