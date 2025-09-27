@@ -1,15 +1,65 @@
-[gd_scene load_steps=4 format=3 uid="uid://duld76qjh2net"]
+[gd_scene load_steps=12 format=3 uid="uid://duld76qjh2net"]
 
 [ext_resource type="PackedScene" uid="uid://bxo2qqpoykia7" path="res://player_1.tscn" id="1_tlwt5"]
 [ext_resource type="PackedScene" uid="uid://dax8cri51eu3g" path="res://player_2.tscn" id="2_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://5kanty4q5rd0" path="res://tilemap.tscn" id="3_036b0"]
+[ext_resource type="PackedScene" uid="uid://b6wkeef53dt0g" path="res://spike.tscn" id="4_036b0"]
+[ext_resource type="PackedScene" uid="uid://bgdakjfs3w6lq" path="res://livestwo.tscn" id="5_dwbse"]
+[ext_resource type="PackedScene" uid="uid://c3xy15i8qw8fk" path="res://livesone.tscn" id="6_dwbse"]
+[ext_resource type="PackedScene" uid="uid://bsidoia26pdhv" path="res://player_one_speed.tscn" id="7_pkg7o"]
+[ext_resource type="PackedScene" uid="uid://bjnuv0noi2hyu" path="res://player_two_speed.tscn" id="8_gbfbk"]
+[ext_resource type="PackedScene" uid="uid://djkpvekdbr6cs" path="res://player_one_jump.tscn" id="9_wse8f"]
+[ext_resource type="PackedScene" uid="uid://dgu2li3xovp4a" path="res://player_two_jump.tscn" id="10_ic0uy"]
+[ext_resource type="PackedScene" uid="uid://63rotfwb2a3e" path="res://Sign.tscn" id="11_ic0uy"]
 
 [node name="World" type="Node2D"]
 
 [node name="Player 1" parent="." instance=ExtResource("1_tlwt5")]
-position = Vector2(375, 22)
+position = Vector2(77, 321)
 
-[node name="player 2" parent="." instance=ExtResource("2_aqk2v")]
-position = Vector2(157, 86)
+[node name="Player 2" parent="." instance=ExtResource("2_aqk2v")]
+position = Vector2(237, 314)
 
 [node name="TileMapLayer" parent="." instance=ExtResource("3_036b0")]
+position = Vector2(-52, 237)
+scale = Vector2(1.4, 1.4)
+
+[node name="Spike" parent="." instance=ExtResource("4_036b0")]
+position = Vector2(413, 575)
+
+[node name="LivesTwo" parent="." instance=ExtResource("5_dwbse")]
+position = Vector2(0, -6)
+
+[node name="LivesOne" parent="." instance=ExtResource("6_dwbse")]
+
+[node name="PlayerOneSpeed" parent="." instance=ExtResource("7_pkg7o")]
+offset_left = 13.0
+offset_top = 92.0
+offset_right = 53.0
+offset_bottom = 115.0
+
+[node name="PlayerTwoSpeed" parent="." instance=ExtResource("8_gbfbk")]
+offset_left = 1048.0
+offset_top = 93.0
+offset_right = 1088.0
+offset_bottom = 116.0
+
+[node name="PlayerOneJump" parent="." instance=ExtResource("9_wse8f")]
+offset_left = 14.0
+offset_top = 130.0
+offset_right = 93.0
+offset_bottom = 153.0
+
+[node name="PlayerTwoJump" parent="." instance=ExtResource("10_ic0uy")]
+offset_left = 1005.0
+offset_top = 124.0
+offset_right = 1045.0
+offset_bottom = 147.0
+
+[node name="GiveLife" parent="." instance=ExtResource("11_ic0uy")]
+position = Vector2(750, 585)
+sign_text = "Give Hearts To Your Partner With 'C' or '/'"
+
+[node name="GiveSpeed" parent="." instance=ExtResource("11_ic0uy")]
+position = Vector2(878, 582)
+sign_text = "Give Speed To Your Partner With 'X' or '.'"

@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://63rotfwb2a3e"]
+
+[ext_resource type="Texture2D" uid="uid://cbq7800iunts7" path="res://heart pixel art 254x254.png" id="1_7l4ce"]
+[ext_resource type="Script" uid="uid://b741pg6c14bmm" path="res://sign.gd" id="1_u07du"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u07du"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u07du"]
+bg_color = Color(0.410202, 0.669135, 0.487534, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.160269, 0.160269, 0.160269, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_u07du")
+sign_text = ""
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_7l4ce")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.5, 1.5)
+shape = SubResource("CircleShape2D_u07du")
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+offset_left = -105.0
+offset_top = -139.0
+offset_right = -5.00001
+offset_bottom = -99.0
+scale = Vector2(2.5, 2.5)
+theme_override_styles/panel = SubResource("StyleBoxFlat_u07du")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 9.0
+offset_right = 234.0
+offset_bottom = 58.0
+scale = Vector2(0.4, 0.4)
+text = "Sacrifice Life For Your Partner
+P1: C, P2: /"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

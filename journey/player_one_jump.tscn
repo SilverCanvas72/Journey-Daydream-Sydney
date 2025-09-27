@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://djkpvekdbr6cs"]
+
+[ext_resource type="Script" uid="uid://dhg0x3tftts88" path="res://player_one_jump.gd" id="1_tt3uk"]
+
+[node name="player_one_jump" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("1_tt3uk")

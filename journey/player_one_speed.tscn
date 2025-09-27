@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsidoia26pdhv"]
+
+[ext_resource type="Script" uid="uid://52qh8uhnxjh6" path="res://player_one_speed.gd" id="1_a5iv3"]
+
+[node name="PlayerOneSpeed" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("1_a5iv3")
